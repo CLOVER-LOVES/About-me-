@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anshumaan Rajpurohit - Full Stack Developer & UI/UX Designer Portfolio">
+    <meta name="keywords" content="web developer, full stack, UI design, UX design, portfolio, Anshumaan Rajpurohit">
+    <meta name="author" content="Anshumaan Rajpurohit">
+    <title>AR Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/simple-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Anshumaan Rajpurohit - Portfolio">
+    <meta property="og:description" content="Full Stack Developer & UI/UX Designer">
+    <meta property="og:image" content="images/portfolio/profile.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Detect JS -->
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a0f2e 0%, #0D0106 100%);
+            min-height: 100vh;
+            margin: 0;
+            color: #FBFBFF; /* Ghost White */
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section {
+            background: rgba(54, 38, 167, 0.05);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .navbar {
+            background: rgba(13, 1, 6, 0.9);
+            padding: 1rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #FBFBFF;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--accent);
+        }
+
+        .portfolio-item {
+            background: rgba(54, 38, 167, 0.1);
+            color: #FBFBFF;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-info h3 {
+            color: #FBFBFF;
+        }
+
+        .highlight {
+            color: var(--accent);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill {
+            background: rgba(54, 38, 167, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar {
+            background: rgba(54, 38, 167, 0.05);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            background: var(--accent);
+            height: 100%;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 8rem 5% 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: #FBFBFF;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #6366f1;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 3%;
+            }
+
+            .portfolio-item {
+                margin-bottom: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Skip to Content for Accessibility -->
+    <a href="#home" class="skip-to-content">Skip to Content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">AR</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Hello, I'm Anshumaan Rajpurohit</h1>
+            <p class="hero-subtitle">Full Stack Developer & UI/UX Designer</p>
+            <p class="hero-description">I create exceptional digital experiences through clean code and user-centered design.</p>
+            <div>
+                <a href="#portfolio" class="cta-button">View My Work</a>
+                <a href="#contact" class="cta-button">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <h2>About Me</h2>
+        <p>I'm a passionate full-stack developer with over 5 years of experience in creating web applications. I specialize in:</p>
+        <ul>
+            <li><i class="fas fa-check"></i> Frontend Development</li>
+            <li><i class="fas fa-check"></i> Backend Development</li>
+            <li><i class="fas fa-check"></i> UI/UX Design</li>
+            <li><i class="fas fa-check"></i> Mobile Development</li>
+        </ul>
+        <a href="#" class="download-cv">Download CV <i class="fas fa-download"></i></a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <div class="skill-info">
+                    <span>HTML/CSS</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-info">
+                    <span>React</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <h2>My Work</h2>
+        <div class="portfolio-item">
+            <img src="https://source.unsplash.com/random/600x400/?website" alt="Project 1">
+            <div class="portfolio-info">
+                <h3>E-commerce Website</h3>
+                <p>A full-featured online shopping platform</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <h2>Contact Me</h2>
+        <form>
+            <div>
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div>
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div>
+                <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Anshumaan Rajpurohit. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#6366f1' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#6366f1',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
+<!-- Compare this snippet from website/contact.html: -->
+<!-- <!DOCTYPE html>        
+ -->
