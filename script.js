@@ -77,8 +77,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             // Close mobile menu if open
-            nav.classList.remove('active');
-            burger.classList.remove('active');
+            if (nav && burger) {
+                nav.classList.remove('active');
+                burger.classList.remove('active');
+            }
         }
     });
 });
